@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Bella's Restaurant — a premium dining experience in Haripur." />
+  <title>Bella's Restaurant | Haripur</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@400;500;600;700&family=Parisienne&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="topbar">
+    <span>📍 Haripur, Khyber Pakhtunkhwa</span>
+    <span>🕐 12:00 PM — 11:00 PM</span>
+    <span>Open Every Day</span>
+  </div>
+
+  <header class="navbar" id="navbar">
+    <a class="brand" href="#home" aria-label="Bella's home">
+      <span class="brand-script">Bella's</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#menu">Menu</a>
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+      <button class="nav-order" onclick="scrollToOrder()">Order Now</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+      <div class="hero-content reveal">
+        <p class="eyebrow">Welcome to</p>
+        <h1>BELLA'S</h1>
+        <p class="hero-tagline">A Taste Worth Remembering</p>
+        <p class="hero-copy">Delicious food, refreshing drinks and beautiful moments await you.</p>
+        <div class="hero-buttons">
+          <a href="#menu" class="btn btn-gold">View Menu</a>
+          <button class="btn btn-outline" onclick="scrollToOrder()">Order Now</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE DISHES -->
+    <section class="section signature" id="menu">
+      <div class="section-heading reveal">
+        <p class="eyebrow brown">Our Signature Dishes</p>
+        <h2>Handpicked <span>specialties</span> just for you</h2>
+        <div class="ornament">✦</div>
+      </div>
+
+      <div class="dish-grid">
+        <article class="dish-card reveal">
+          <div class="dish-image"><img src="assets/signature-dish.jpeg" alt="Bella's sizzling steak platter"><span class="badge">Bella's Favorite</span></div>
+          <div class="dish-info"><h3>Sizzling Steak Platter</h3><p class="price">Rs. 1,450</p><button class="small-btn" onclick="addToCart('Sizzling Steak Platter',1450)">Order Now</button></div>
+        </article>
+        <article class="dish-card reveal">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1200&q=85" alt="Fresh restaurant pizza"></div>
+          <div class="dish-info"><h3>Classic Bella Pizza</h3><p class="price">Rs. 1,250</p><button class="small-btn" onclick="addToCart('Classic Bella Pizza',1250)">Order Now</button></div>
+        </article>
+        <article class="dish-card reveal">
+          <div class="dish-image"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1200&q=85" alt="Gourmet restaurant burger"></div>
+          <div class="dish-info"><h3>Gourmet Bella Burger</h3><p class="price">Rs. 850</p><button class="small-btn" onclick="addToCart('Gourmet Bella Burger',850)">Order Now</button></div>
+        </article>
+        <article class="dish-card reveal">
+          <div class="dish-image"><img src="assets/drinks.jpeg" alt="Bella's refreshing green drinks"></div>
+          <div class="dish-info"><h3>Fresh Green Cooler</h3><p class="price">Rs. 350</p><button class="small-btn" onclick="addToCart('Fresh Green Cooler',350)">Order Now</button></div>
+        </article>
+      </div>
+
+      <div class="center-action">
+        <a href="#full-menu" class="text-link">Explore Full Menu <span>→</span></a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="split-section" id="about">
+      <div class="split-image reveal">
+        <img src="assets/interior.jpeg" alt="Bella's modern restaurant interior">
+      </div>
+      <div class="split-copy reveal">
+        <p class="eyebrow brown">Welcome to Bella's</p>
+        <h2>Good Food, Good Mood, <em>Great Memories</em></h2>
+        <p>At Bella's, every meal is an experience. From flavorful dishes to refreshing drinks and a beautiful atmosphere, everything is made to make your moments unforgettable.</p>
+        <a class="btn btn-olive" href="#experience">Discover Our Story</a>
+      </div>
+    </section>
+
+    <!-- DRINK FEATURE -->
+    <section class="drink-feature">
+      <div class="drink-visual reveal"><div class="drink-orb">B</div><span>Fresh • Cold • Bella's</span></div>
+      <div class="drink-copy reveal">
+        <p class="eyebrow">Refresh Your Senses</p>
+        <h2>Cool. Fresh.<br><em>Delicious.</em></h2>
+        <p>Try our refreshing drinks made with care and the finest ingredients.</p>
+        <a href="#full-menu" class="btn btn-gold">Explore Drinks <span>→</span></a>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section experience" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow brown">The Bella's Experience</p>
+        <h2>Made for <span>moments</span> that matter</h2>
+        <div class="ornament">✦</div>
+      </div>
+
+      <div class="experience-grid">
+        <div class="experience-item reveal"><div class="exp-icon">◉</div><h3>Quality Food</h3><p>Fresh ingredients and carefully prepared dishes.</p></div>
+        <div class="experience-item reveal"><div class="exp-icon">☕</div><h3>Cozy Ambience</h3><p>A warm and modern space to enjoy with family and friends.</p></div>
+        <div class="experience-item reveal"><div class="exp-icon">♥</div><h3>Great Service</h3><p>Friendly hospitality designed to make you feel at home.</p></div>
+        <div class="experience-item reveal"><div class="exp-icon">✦</div><h3>Memorable Moments</h3><p>Every visit becomes a memory you'll cherish.</p></div>
+      </div>
+    </section>
+
+    <!-- FULL MENU -->
+    <section class="menu-section section" id="full-menu">
+      <div class="section-heading reveal">
+        <p class="eyebrow brown">From Our Kitchen</p>
+        <h2>Explore Our <span>Menu</span></h2>
+        <div class="ornament">✦</div>
+      </div>
+
+      <div class="menu-tabs" role="tablist">
+        <button class="active" onclick="filterMenu('all', this)">All</button>
+        <button onclick="filterMenu('main', this)">Main Course</button>
+        <button onclick="filterMenu('burger', this)">Burgers</button>
+        <button onclick="filterMenu('drinks', this)">Drinks</button>
+      </div>
+
+      <div class="menu-list">
+        <div class="menu-item" data-cat="main"><div><h3>Sizzling Chicken</h3><p>Grilled chicken, vegetables, fries & creamy sauce.</p></div><strong>Rs. 1,450</strong><button onclick="addToCart('Sizzling Chicken',1450)">+</button></div>
+        <div class="menu-item" data-cat="main"><div><h3>Bella's Special</h3><p>Chef's special plate prepared with Bella's signature touch.</p></div><strong>Rs. 1,250</strong><button onclick="addToCart('Bella’s Special',1250)">+</button></div>
+        <div class="menu-item" data-cat="burger"><div><h3>Zesty Burger</h3><p>Juicy burger served with golden fries.</p></div><strong>Rs. 850</strong><button onclick="addToCart('Zesty Burger',850)">+</button></div>
+        <div class="menu-item" data-cat="main"><div><h3>Creamy Alfredo Pasta</h3><p>Creamy pasta with Bella's house-style seasoning.</p></div><strong>Rs. 1,150</strong><button onclick="addToCart('Creamy Alfredo Pasta',1150)">+</button></div>
+        <div class="menu-item" data-cat="drinks"><div><h3>Fresh Green Cooler</h3><p>A refreshing cold drink served chilled.</p></div><strong>Rs. 350</strong><button onclick="addToCart('Fresh Green Cooler',350)">+</button></div>
+        <div class="menu-item" data-cat="drinks"><div><h3>Signature Refreshment</h3><p>Fresh, cool and perfect with your meal.</p></div><strong>Rs. 400</strong><button onclick="addToCart('Signature Refreshment',400)">+</button></div>
+      </div>
+      <p class="demo-note">Demo prices and names are placeholders. Replace them with Bella's actual menu before showing the final version to the owner.</p>
+    </section>
+
+    <!-- BELLA'S HIGHLIGHTS -->
+    <section class="section highlights" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow brown">The Bella's Difference</p>
+        <h2>Beautiful space. <span>Beautiful moments.</span></h2>
+        <div class="ornament">✦</div>
+      </div>
+      <div class="highlights-grid">
+        <div class="highlight-card reveal"><span>01</span><h3>Freshly Prepared</h3><p>Flavorful dishes prepared to make every visit special.</p></div>
+        <div class="highlight-card reveal"><span>02</span><h3>Modern Ambience</h3><p>A welcoming interior designed for family and friends.</p></div>
+        <div class="highlight-card reveal"><span>03</span><h3>Something for Everyone</h3><p>From sizzling mains to pizza, burgers and refreshing drinks.</p></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="dark-cta">
+      <div class="cta-overlay"></div>
+      <div class="cta-content reveal">
+        <p class="eyebrow">A place to gather</p>
+        <h2>A taste to remember.<br><em>Bella's</em></h2>
+        <a href="#menu" class="btn btn-gold">View Our Menu</a>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact-section section" id="contact">
+      <div class="contact-copy reveal">
+        <p class="eyebrow brown">Visit Bella's</p>
+        <h2>Come dine <span>with us</span></h2>
+        <div class="contact-details">
+          <p>📍 <strong>Location</strong><br>Haripur, Khyber Pakhtunkhwa</p>
+          <p>📞 <strong>Phone</strong><br>03XX-XXXXXXX</p>
+          <p>✉️ <strong>Email</strong><br>hello@bellas.com</p>
+          <p>🕐 <strong>Opening Hours</strong><br>12:00 PM — 11:00 PM (Every Day)</p>
+        </div>
+        <a class="btn btn-olive" href="https://www.google.com/maps/search/?api=1&query=Bella%27s+Restaurant+Haripur" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+
+      <div class="map-card reveal">
+        <div class="fake-map">
+          <span class="map-pin">📍</span>
+          <h3>Bella's Restaurant</h3>
+          <p>Haripur, KPK</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Bella%27s+Restaurant+Haripur" target="_blank" rel="noopener">Open in Google Maps →</a>
+        </div>
+      </div>
+
+      <div class="whatsapp-card reveal" id="order-box">
+        <span class="wa-icon">◉</span>
+        <p class="eyebrow">Hungry already?</p>
+        <h3>Order on WhatsApp</h3>
+        <p>Add your food to the cart and send your order directly to Bella's.</p>
+        <button class="btn btn-wa" onclick="sendWhatsApp()">Order Now on WhatsApp</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- CART DRAWER -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart">
+    <div class="cart-header">
+      <h2>Your Order</h2>
+      <button onclick="toggleCart(false)" aria-label="Close cart">×</button>
+    </div>
+    <div id="cartItems" class="cart-items">
+      <p class="empty-cart">Your cart is empty.</p>
+    </div>
+    <div class="cart-footer">
+      <div><span>Total</span><strong id="cartTotal">Rs. 0</strong></div>
+      <button class="btn btn-wa full" onclick="sendWhatsApp()">Order on WhatsApp</button>
+    </div>
+  </aside>
+  <div class="cart-backdrop" id="cartBackdrop" onclick="toggleCart(false)"></div>
+
+  <button class="floating-cart" onclick="toggleCart(true)" aria-label="Open cart">
+    🛒 <span id="cartCount">0</span>
+  </button>
+
+  <footer>
+    <div class="footer-brand">Bella's</div>
+    <p>Good Food. Good Mood. Great Memories.</p>
+    <div class="footer-links"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#gallery">Gallery</a><a href="#contact">Contact</a></div>
+    <small>© 2026 Bella's Restaurant. Demo website concept.</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
